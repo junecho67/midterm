@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Plans</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Balanced Bites Subscription Plans</h1>
+        <nav class="navbar">
+            <a href="home.html" class="logo">
+                <img src="images/logo.png" alt="Balanced Bites" id="logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="subscription.html">Subscriptions</a></li>
+                <li><a href="login.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="subscription-section">
+        <h2>Our Subscriptions</h2>
+        <div id="plans-container" class="form-container plan-grid">
+            <!-- Subscription plans will be displayed here by JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BalancedBites. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const plans = [
+            { name: "Basic Plan", price: 49.99, meals: 5 },
+            { name: "Premium Plan", price: 89.99, meals: 10 },
+            { name: "Family Plan", price: 129.99, meals: 15 }
+        ];
+
+        const planBenefits = {
+            "Basic Plan": ["5 meals per week", "Email support", "Free delivery"],
+            "Premium Plan": ["10 meals per week", "Priority support", "Free delivery", "Nutritional consultation"],
+            "Family Plan": ["15 meals per week", "Dedicated support", "Free delivery", "Weekly health tips"]
+        };
+
+        function Subscription(name, price, meals) {
+            this.name = name;
+            this.price = price;
+            this.meals = meals;
+            this.description = function() {
+                return `${this.name} offers ${this.meals} meals per week at $${this.price}`;
+            };
+        }
+
+        function displayPlans() {
+            const plansContainer = document.getElementById("plans-container");
+            plansContainer.innerHTML = ""; // Clear previous content
+
+            plans.forEach(plan => {
+                const planObject = new Subscription(plan.name, plan.price, plan.meals);
+                const planDiv = document.createElement("div");
+                planDiv.classList.add("plan");
+
+                const planName = document.createElement("h3");
+                planName.textContent = planObject.name;
+                planDiv.appendChild(planName);
+
+                const planPrice = document.createElement("p");
+                planPrice.textContent = `Price: $${planObject.price}`;
+                planDiv.appendChild(planPrice);
+
+                const benefitsList = document.createElement("ul");
+                planBenefits[planObject.name].forEach(benefit => {
+                    const benefitItem = document.createElement("li");
+                    benefitItem.textContent = benefit;
+                    benefitsList.appendChild(benefitItem);
+                });
+                planDiv.appendChild(benefitsList);
+
+                plansContainer.appendChild(planDiv);
+            });
+        }
+
+        // Display plans immediately on page load
+        document.addEventListener("DOMContentLoaded", displayPlans);
+    </script>
+</body>
+</html>
