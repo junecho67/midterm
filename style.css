@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f6f6f6;
+    color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: white;
+    color: #2e7d32;
+    padding: 19px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.navbar a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #ff8f00;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 120px 20px;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; 
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; 
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Hero Headline */
+.hero h1 {
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Hero Paragraph */
+.hero p {
+    font-size: 18px;
+    color: #d1d1d1;
+    margin-bottom: 40px;
+}
+
+/* CTA Button */
+.cta-button {
+    background-color: #ff8f00;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff6f00;
+}
+
+/* Why Choose Balanced Bites Section */
+.why-choose-us {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f6f6f6;
+    font-family: 'Roboto', sans-serif;
+}
+
+.why-choose-us h2 {
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1 1 300px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: left;
+    margin-bottom: 20px;
+
+}
+
+
+.feature-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 24px;
+    color: #ff8f00;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.6;
+}
+
+
+/* Footer */
+footer {
+    background-color: #2e7d32;
+    color: #ffffff;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-socials {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-logo .logo-img {
+    width: 40px;
+    height: auto;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+}
+
+.link-pair {
+    display: flex;
+    gap: 20px;
+}
+
+.link-pair a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 0.9em;
+    font-weight: light;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.link-pair a:hover {
+    color: #ff8f00;
+}
+
+/* Footer Social Icons */
+.social-icons a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    margin: 0 8px;
+}
+
+.social-icons a:hover {
+    color: #ff8f00;
+}
+
+
+/* Newsletter Title */
+.newsletter h3 {
+    font-size: 1.0em;
+    color: #ff8f00;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Newsletter Form */
+.newsletter form {
+    display: flex;
+    gap: 5px;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #555555;
+    background-color: #ffffff;
+    color: #163c18;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #ff8f00;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #ff6f00;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    color: #163c18;
+    font-size: 0.8em;
+    margin-top: 40px;
+    border-top: 0.2px solid #235f26;
+}
