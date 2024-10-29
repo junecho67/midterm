@@ -8,7 +8,6 @@
 </head>
 <body>
     <header>
-        <h1>Balanced Bites Subscription Plans</h1>
         <nav class="navbar">
             <a href="home.html" class="logo">
                 <img src="images/logo.png" alt="Balanced Bites" id="logo">
@@ -22,7 +21,7 @@
     </header>
 
     <main class="subscription-section">
-        <h2>Our Subscriptions</h2>
+        <h1>Our Subscriptions</h1>
         <div id="plans-container" class="form-container plan-grid">
             <!-- Subscription plans will be displayed here by JavaScript -->
         </div>
@@ -56,7 +55,7 @@
 
         function displayPlans() {
             const plansContainer = document.getElementById("plans-container");
-            plansContainer.innerHTML = ""; // Clear previous content
+            plansContainer.innerHTML = ""; 
 
             plans.forEach(plan => {
                 const planObject = new Subscription(plan.name, plan.price, plan.meals);
