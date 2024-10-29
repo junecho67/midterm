@@ -1,21 +1,22 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General Styles */
+/* General Body Styling */
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #f6f6f6;
     color: #333;
 }
 
-/* Navigation Bar */
+/* Navbar Styling */
 .navbar {
     background-color: white;
     color: #2e7d32;
-    padding: 19px;
+    padding: 20px; /* Consistent padding for all pages */
     position: fixed;
     width: 100%;
     top: 0;
@@ -26,6 +27,28 @@ body {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 0.5rem;
+}
+
+/* Logo Image */
+#logo {
+    width: 40px;
+    height: auto;
+}
+
+/* Logo Text */
+.logo-text {
+    font-size: 1.25rem;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/* Navbar Links */
 .navbar ul {
     list-style: none;
     display: flex;
