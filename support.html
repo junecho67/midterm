@@ -5,54 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Customer Support</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Add jQuery Library -->
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo-container">
-                <a href="home.html">
-                    <img src="logo.png" alt="Balanced Bites" id="logo">
-                </a>
-                <span class="logo-text">Balanced Bites</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="results.html">View Your Meal</a></li>
-                <li><a href="subscription.html">Subscriptions</a></li>
-                <li><a href="login.html">Sign In</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+  <nav class="navbar">
+    <div class="logo-container">
+      <a href="home.html">
+        <img src="logo.png" alt="Balanced Bites" id="logo">
+      </a>
+      <span class="logo-text">Balanced Bites</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="results.html">View Your Meal</a></li>
+      <li><a href="subscription.html">Subscriptions</a></li>
+      <li><a href="login.html">Sign In</a></li>
+    </ul>
+  </nav>
+</header>
 
 <section class="support-section">
-    <h2>Customer Support</h2>
+  <h2>Customer Support</h2>
 
-    <div class="support-option">
-      <h3>Frequently Asked Questions (FAQs)</h3>
-      <p>Get answers to common questions:</p>
-      <div class="faq-section">
-        <button class="faq-toggle">What do I do if I don't like my meal plan?</button>
-        <ul class="faq-list">
-            <li>Simply retake the survey to update your preferences!</li>
-        </ul>
-      </div>
-      <div class="faq-section">
-        <button class="faq-toggle">Food is not being delivered on time</button>
-        <ul class="faq-list">
-            <li>Please call us at 857-488-8411, and we will resolve the delivery issue or get it to you as quickly as possible.</li>
-        </ul>
-      </div>
-      <div class="faq-section">
-        <button class="faq-toggle">How do I cancel my subscription?</button>
-        <ul class="faq-list">
-            <li>To cancel your subscription, log in to your account, go to the "Subscription Settings," and select "Cancel Subscription." If you need further assistance, please contact us, and we will be happy to help!</li>
-        </ul>
-      </div>
+  <div class="support-option">
+    <h3>Frequently Asked Questions (FAQs)</h3>
+    <p>Get answers to common questions:</p>
+    <div class="faq-section">
+      <button class="faq-toggle">What do I do if I don't like my meal plan?</button>
+      <ul class="faq-list" style="display: none;">
+        <li>Simply retake the survey to update your preferences!</li>
+      </ul>
     </div>
+    <div class="faq-section">
+      <button class="faq-toggle">Food is not being delivered on time</button>
+      <ul class="faq-list" style="display: none;">
+        <li>Please call us at 857-488-8411, and we will resolve the delivery issue or get it to you as quickly as possible.</li>
+      </ul>
+    </div>
+    <div class="faq-section">
+      <button class="faq-toggle">How do I cancel my subscription?</button>
+      <ul class="faq-list" style="display: none;">
+        <li>To cancel your subscription, log in to your account, go to the "Subscription Settings," and select "Cancel Subscription." If you need further assistance, please contact us, and we will be happy to help!</li>
+      </ul>
+    </div>
+  </div>
    
 
     <div class="support-option">
@@ -116,28 +112,53 @@
 </footer>
 
 <script>
-    $(document).ready(function() {
-        $('.faq-toggle').click(function() {
-            $(this).next('.faq-list').fadeToggle();
-        });
+    // Custom fadeToggle function using vanilla JavaScript
+    function fadeToggle(element) {
+      const displayStyle = window.getComputedStyle(element).display;
+      element.style.transition = "opacity 0.5s ease"; // Adjust duration as needed
+  
+      if (displayStyle === "none") {
+        element.style.display = "block";
+        element.style.opacity = "0";
+        setTimeout(() => {
+          element.style.opacity = "1";
+        }, 10);
+      } else {
+        element.style.opacity = "0";
+        setTimeout(() => {
+          element.style.display = "none";
+        }, 500); // Match the transition duration
+      }
+    }
+  
+    // Event listener for FAQ toggle buttons
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+      button.addEventListener('click', function () {
+        const faqList = this.nextElementSibling;
+        fadeToggle(faqList);
+      });
     });
-
-    document.getElementById("feedback-form").addEventListener("submit", function(event) {
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
-
-        if (!name || !email || !message) {
-            alert("Please fill out all fields.");
-            event.preventDefault();
-        } else if (!/\S+@\S+\.\S+/.test(email)) {
-            alert("Please enter a valid email.");
-            event.preventDefault();
-        } else {
-            alert("Feedback submitted successfully!");
-        }
+  
+    // Feedback form validation
+    document.getElementById("feedback-form")?.addEventListener("submit", function(event) {
+      const name = document.getElementById("name")?.value;
+      const email = document.getElementById("email")?.value;
+      const message = document.getElementById("message")?.value;
+  
+      if (!name || !email || !message) {
+        alert("Please fill out all fields.");
+        event.preventDefault();
+      } else if (!/\S+@\S+\.\S+/.test(email)) {
+        alert("Please enter a valid email.");
+        event.preventDefault();
+      } else {
+        alert("Feedback submitted successfully!");
+      }
     });
-</script>
+  </script>
+  
+  </body>
+  </html>
 
 </body>
 </html>
