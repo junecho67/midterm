@@ -335,3 +335,182 @@ footer {
     margin-top: 40px;
     border-top: 0.2px solid #235f26;
 }
+
+
+/* Login Section */
+.login-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.login-section h2 {
+    font-size: 36px;
+    color: #2e7d32;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Form Container */
+.form-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 70px;
+
+}
+
+/* Form Elements */
+.form-element {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-element label {
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 8px;
+}
+
+.form-element input[type="text"],
+.form-element input[type="password"] {
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #dddddd;
+    font-size: 16px;
+    color: #333333;
+}
+
+.form-element input[type="text"]:focus,
+.form-element input[type="password"]:focus {
+    border-color: #ff8f00;
+    outline: none;
+}
+
+/* Login Button */
+.login-button {
+    background-color: #ff8f00;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #ff6f00;
+}
+
+/* Sign-up Text */
+.signup-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555555;
+}
+
+.signup-text a {
+    color: #ff8f00;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+/* Customer Support Page */
+.support-section {
+    padding: 60px 20px;
+    background-color: #f6f6f6;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.support-section h2 {
+    font-size: 36px;
+    color: #2e7d32;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.support-option {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.support-option h3 {
+    font-size: 24px;
+    color: #ff8f00;
+    margin-bottom: 15px;
+}
+
+.support-option p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.support-option a.button {
+    display: inline-block;
+    background-color: #ff8f00;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.support-option a.button:hover {
+    background-color: #ff6f00;
+}
+
+/* FAQ Section */
+.faq-section {
+    margin-bottom: 15px;
+}
+
+.faq-toggle {
+    background-color: #ff8f00;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.faq-toggle:hover {
+    background-color: #ff6f00;
+}
+
+.faq-list {
+    display: none;
+    padding-left: 20px;
+    color: #555;
+    list-style-type: disc;
+    margin-top: 10px;
+}
