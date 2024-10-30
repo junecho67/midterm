@@ -778,7 +778,7 @@ footer {
     min-height: 100px;
 }
 
-/* Survey Submit Button */
+/* Survey submit button */
 #submit-btn {
     background-color: #ff8f00;
     color: #ffffff;
@@ -787,13 +787,85 @@ footer {
     border-radius: 4px;
     cursor: pointer;
     font-size: 18px;
-    width: 100%; /* Fixed width for better alignment */
-    margin: 20px auto 0; /* Center align by setting horizontal margin to auto */
-    display: block; /* Ensure it takes up full block space for centering */
-    transition: background-color 0.3s ease;
+    width: 100%;
+    margin: 20px auto 0; 
+    display: block;
     text-align: center;
 }
 
 #submit-btn:hover {
     background-color: #ff6f00;
+}
+
+/* View Your Meal Section */
+
+.section-header {
+    text-align: center;
+    font-size: 32px;
+    color: #2e7d32; 
+    margin-top: 80px; 
+    margin-bottom: 20px; 
+}
+
+#meals {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.meal-column {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px #555555;
+    flex: 1;
+    min-width: 250px;
+}
+
+.meal-column h3 {
+    font-size: 24px;
+    color: #ff8f00;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.meal-column ol {
+    padding-left: 20px;
+}
+
+.meal-column li {
+    margin-bottom: 10px;
+    color: #555555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.description-text {
+    text-align: center;
+    font-size: 16px;
+    color: #555555;
+    margin: 10px 50px;
+}
+
+.retake-survey-btn {
+    display: block;
+    width: 160px;
+    margin: 0 auto 40px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #2e7d32; 
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+.retake-survey-btn:hover {
+    background-color: #256728;
 }
