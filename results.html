@@ -1,14 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Results</title>
+    <style>
+        /* Internal styles for responsiveness */
+        /* General styling adjustments */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            background-color: #f6f6f6;
+        }
+
+        /* Navbar adjustments for mobile */
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 15px;
+            justify-content: space-between;
+        }
+
+        .logo-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            padding: 0;
+        }
+
+        /* Main content adjustments */
+        .results-section {
+            padding: 40px 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Meal columns adjustments for responsive layout */
+        #meals {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px 10px;
+        }
+
+        .meal-column {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1 1 100%;
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+
+        .meal-column h3 {
+            font-size: 20px;
+            color: #ff8f00;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .meal-column ol {
+            padding-left: 20px;
+        }
+
+        .meal-column li {
+            margin-bottom: 8px;
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Button adjustments */
+        .retake-survey-btn {
+            display: block;
+            width: 180px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #2e7d32; 
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+        }
+
+        .retake-survey-btn:hover {
+            background-color: #256728;
+        }
+
+        /* Footer styling adjustments for mobile */
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .footer-section {
+            text-align: center;
+        }
+
+        /* Responsive design media query for screens 768px and below */
+        @media (max-width: 768px) {
+            /* Stack navigation links vertically */
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .results-section {
+                padding: 30px 10px;
+            }
+
+            /* Make meal columns full width for better readability */
+            #meals {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .meal-column {
+                max-width: 100%;
+            }
+
+            /* Footer sections stack vertically on smaller screens */
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Remaining content of the HTML -->
     <header>
         <nav class="navbar">
             <div class="logo-container">
@@ -26,58 +168,56 @@
         </nav>
     </header>
                     
-        <section class="results-section">
-            <h2>View Your Meals</h2>
+    <section class="results-section">
+        <h2>View Your Meals</h2>
         <p class="description-text">
             <i>Here are your personalized meal recommendations based on your survey results. <br>
                 If you're not satisfied, feel free to retake the survey by scrolling down 
                 and clicking the button below.</i>
         </p>    
 
-    <section id="meals">
-        <div class="meal-column">
-            <h3>Breakfast</h3>
-            <ol>
-                <li><strong>Smoothie Bowl</strong>: Blend <strong>fruits</strong> 
-                    with <strong>almond milk</strong>, then top with <strong>nuts, 
-                    seeds, and granola</strong>.</li>
-                <li><strong>Chia Seed Pudding</strong>: Combine <strong>chia seeds</strong> 
-                    with <strong>almond milk</strong> and let them soak overnight; 
-                    then add <strong>honey and fresh fruits</strong>.</li>
-                <li><strong>Omelet</strong>: Whisk <strong>eggs</strong> and fill 
-                    with <strong>veggies</strong> like spinach and tomatoes, then 
-                    top with <strong>cheese</strong>.</li>
-            </ol>
-        </div>
-    
-        <div class="meal-column">
-            <h3>Lunch</h3>
-            <ol>
-                <li><strong>Quinoa Salad</strong>: Cook <strong>quinoa</strong> with <strong>tomatoes, cucumbers, feta cheese, and oil dressing</strong>.</li>
-                <li><strong>Lettuce Wraps</strong>: Fill large <strong>lettuce leaves</strong> with <strong>grilled chicken, avocado, and fresh salsa</strong>.</li>
-                <li><strong>Zucchini Noodles</strong>: Spiralize <strong>zucchini</strong>, sauté in olive oil with garlic, and add <strong>marinara sauce</strong>.</li>
-            </ol>
-        </div>
-    
-        <div class="meal-column">
-            <h3>Dinner</h3>
-            <ol>
-                <li><strong>Grilled Salmon</strong>: Serve salmon fillets with roasted sweet potatoes and steamed broccoli.</li>
-                <li><strong>Zucchini Noodles</strong>: Sauté spiralized <strong>zucchini</strong> with <strong>marinara sauce</strong> and add <strong>meatballs</strong>.</li>
-                <li><strong>Curry</strong>: Create a <strong>chickpea or vegetable curry</strong> using <strong>coconut milk</strong>, served over <strong>rice</strong>.</li>
-            </ol>
-        </div>
+        <section id="meals">
+            <div class="meal-column">
+                <h3>Breakfast</h3>
+                <ol>
+                    <li><strong>Smoothie Bowl</strong>: Blend <strong>fruits</strong> 
+                        with <strong>almond milk</strong>, then top with <strong>nuts, 
+                        seeds, and granola</strong>.</li>
+                    <li><strong>Chia Seed Pudding</strong>: Combine <strong>chia seeds</strong> 
+                        with <strong>almond milk</strong> and let them soak overnight; 
+                        then add <strong>honey and fresh fruits</strong>.</li>
+                    <li><strong>Omelet</strong>: Whisk <strong>eggs</strong> and fill 
+                        with <strong>veggies</strong> like spinach and tomatoes, then 
+                        top with <strong>cheese</strong>.</li>
+                </ol>
+            </div>
+        
+            <div class="meal-column">
+                <h3>Lunch</h3>
+                <ol>
+                    <li><strong>Quinoa Salad</strong>: Cook <strong>quinoa</strong> with <strong>tomatoes, cucumbers, feta cheese, and oil dressing</strong>.</li>
+                    <li><strong>Lettuce Wraps</strong>: Fill large <strong>lettuce leaves</strong> with <strong>grilled chicken, avocado, and fresh salsa</strong>.</li>
+                    <li><strong>Zucchini Noodles</strong>: Spiralize <strong>zucchini</strong>, sauté in olive oil with garlic, and add <strong>marinara sauce</strong>.</li>
+                </ol>
+            </div>
+        
+            <div class="meal-column">
+                <h3>Dinner</h3>
+                <ol>
+                    <li><strong>Grilled Salmon</strong>: Serve salmon fillets with roasted sweet potatoes and steamed broccoli.</li>
+                    <li><strong>Zucchini Noodles</strong>: Sauté spiralized <strong>zucchini</strong> with <strong>marinara sauce</strong> and add <strong>meatballs</strong>.</li>
+                    <li><strong>Curry</strong>: Create a <strong>chickpea or vegetable curry</strong> using <strong>coconut milk</strong>, served over <strong>rice</strong>.</li>
+                </ol>
+            </div>
+        </section>
+
+        <a href="survey.html" class="retake-survey-btn">Retake Survey</a>
     </section>
 
-    <a href="survey.html" class="retake-survey-btn">Retake Survey</a>
-    
-
-    <!-- footer -->
+    <!-- Footer content here -->
     <footer>
         <div class="footer-content">
-            <!-- socials -->
             <div class="footer-section logo-socials">
-
                 <div class="social-icons">
                     <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
                     <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
@@ -85,7 +225,6 @@
                 </div>
             </div>
 
-            <!-- nav -->
             <div class="footer-section links">
                 <div class="link-pair">
                     <a href="contact.html">Contact Us</a>
@@ -93,7 +232,6 @@
                 </div>
             </div>
 
-            <!-- Newsletter Signup -->
             <div class="footer-section newsletter">
                 <h3>Subscribe to Balanced Bites</h3>
                 <form action="#" method="post">
@@ -103,13 +241,9 @@
             </div>
         </div>
 
-
-
         <div class="footer-bottom">
             <p>&copy; 2024 Balanced Bites. All rights reserved.</p>
         </div>
     </footer>
-
 </body>
-
 </html>
