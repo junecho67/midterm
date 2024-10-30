@@ -879,3 +879,138 @@ footer {
 .retake-survey-btn:hover {
     background-color: #256728;
 }
+
+
+
+/* Responsive Screens */
+@media only screen and (max-width: 1024px) {
+    nav a {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    
+    h1 {
+        font-size: 30px;
+    }
+    
+    .button.login {
+        font-size: 14px;
+        padding: 8px 25px;
+    }
+
+    /* Maintain horizontal alignment for navbar */
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    nav a {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .button.login {
+        font-size: 12px;
+        padding: 6px 20px;
+    }
+
+    /* Reduce spacing in navbar but keep items aligned */
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+
+    .logo-container {
+        margin-right: auto;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Stack navbar items vertically only on very small screens */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px;
+    }
+
+    .logo-container {
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .button.login {
+        font-size: 10px;
+        padding: 4px 15px;
+    }
+}
+
+/* Responsive Styling for Buttons */
+@media only screen and (max-width: 1024px) {
+    .banner .button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .banner .button {
+        font-size: 12px;
+        padding: 8px 18px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .banner .button {
+        font-size: 10px;
+        padding: 6px 15px;
+    }
+}
+
+
+/* Center Footer Content on Smaller Screens */
+@media only screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center-align text */
+        padding: 15px;
+    }
+
+    .footer-section {
+        margin-bottom: 15px; /* Add spacing between sections */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .footer-content {
+        padding: 10px;
+    }
+
+    .footer-section {
+        padding: 10px 0; /* Further reduce padding for tight spaces */
+    }
+
+    .footer-bottom {
+        font-size: 0.9em; /* Reduce font size for small screens */
+    }
+}
