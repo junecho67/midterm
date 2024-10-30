@@ -885,36 +885,33 @@ footer {
 /* Responsive Screens */
 @media only screen and (max-width: 1024px) {
     nav a {
-        font-size: 10px; /* Reduce font size */
-        padding: 6px 8px;
+        font-size: 9px;
+        padding: 8px 12px;
     }
     
     h1 {
         font-size: 30px;
     }
-
+    
     h2 {
-        margin-top: 20px; /* Reduce top margin for visibility */
+        margin-top: 30px; /* Increased margin for readability on larger mobile screens */
     }
 
     .button.login {
         font-size: 14px;
         padding: 8px 25px;
     }
+
+    /* Maintain horizontal alignment for navbar */
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+    }
 }
 
 @media only screen and (max-width: 768px) {
-    /* Navbar font and layout adjustments */
-    .navbar {
-        padding: 10px;
-    }
-
-    .logo-container {
-        margin-right: auto;
-    }
-
     nav a {
-        font-size: 10px; /* Smaller font for mobile */
+        font-size: 9px;
         padding: 6px 10px;
     }
 
@@ -923,38 +920,56 @@ footer {
     }
 
     h2 {
-        margin-top: 15px; /* Further reduce top margin */
+        margin-top: 40px; /* Further increase margin-top for readability on smaller screens */
     }
 
     .button.login {
         font-size: 12px;
         padding: 6px 20px;
     }
+
+    /* Reduce spacing in navbar but keep items aligned */
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+
+    .logo-container {
+        margin-right: auto;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 10px;
+    }
 }
 
 @media only screen and (max-width: 480px) {
-    /* Navbar adjustments */
+    /* Stack navbar items vertically only on very small screens */
     .navbar {
+        flex-direction: column;
+        align-items: flex-start;
         padding: 8px;
     }
 
-    .logo-text {
-        font-size: 0.9rem;
+    .logo-container {
+        margin-bottom: 10px;
     }
 
     nav a {
-        font-size: 9px; /* Even smaller font size for narrow screens */
+        font-size: 9px;
         padding: 4px 8px;
     }
 
     h1 {
         font-size: 20px;
     }
-
     h2 {
-        margin-top: 10px; /* Minimal margin to avoid cutting off text */
-        font-size: 24px; /* Adjust header size for readability */
+        margin-top: 50px; /* Max margin-top for smallest screens to create visual separation */
+        font-size: 24px; /* Adjust font size for readability */
     }
+
 
     .button.login {
         font-size: 10px;
@@ -962,6 +977,27 @@ footer {
     }
 }
 
+/* Responsive Styling for Buttons */
+@media only screen and (max-width: 1024px) {
+    .banner .button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .banner .button {
+        font-size: 12px;
+        padding: 8px 18px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .banner .button {
+        font-size: 10px;
+        padding: 6px 15px;
+    }
+}
 
 
 /* Center Footer Content on Smaller Screens */
