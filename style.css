@@ -959,101 +959,102 @@ footer {
     }
 }
 
-/* Responsive Screens */
+/* General Styles for Navbar */
+.navbar {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Align items vertically */
+    background-color: #f8f8f8; /* Background color for the navbar */
+    padding: 10px 20px; /* Padding for the navbar */
+}
+
+.navbar ul {
+    list-style: none; /* Remove bullets from list */
+    display: flex; /* Flexbox for horizontal layout */
+    gap: 15px; /* Space between links */
+}
+
+.navbar a {
+    text-decoration: none; /* Remove underline from links */
+    color: #2e7d32; /* Link color */
+}
+
+/* Responsive Adjustments */
 @media only screen and (max-width: 1024px) {
-    nav a {
-        font-size: 9px;
-        padding: 8px 12px;
-    }
-    
-    h1 {
-        font-size: 30px;
-    }
-    
-    h2 {
-        margin-top: 30px;
-    }
-
-    .button.login {
-        font-size: 14px;
-        padding: 8px 25px;
-    }
-
-    /* Maintain horizontal alignment for navbar */
     .navbar {
-        flex-direction: row;
-        align-items: center;
+        padding: 15px;
+    }
+
+    #logo {
+        width: 35px;
+    }
+
+    .logo-text {
+        font-size: 1.1rem; 
+    }
+
+    .navbar ul {
+        gap: 30px; /* Space between links */
+    }
+
+    .navbar a {
+        font-size: 14px;
+        padding: 8px 12px;
     }
 }
 
 @media only screen and (max-width: 768px) {
-
-    h1 {
-        font-size: 24px;
+    .navbar {
+        padding: 10px;
     }
 
-    h2 {
-        margin-top: 80px;
+    #logo {
+        width: 30px;
     }
 
-    .button.login {
+    .logo-text {
+        font-size: 1rem;
+    }
+
+    .navbar ul {
+        gap: 20px; /* Space between links */
+    }
+
+    .navbar a {
         font-size: 12px;
-        padding: 6px 20px;
+        padding: 6px 10px;
     }
-
-    .logo-container {
-        margin-right: auto;
-    }
-
 }
 
 @media only screen and (max-width: 480px) {
+    .navbar {
+        flex-direction: row; /* Ensure horizontal layout */
+        padding: 8px;
+    }
+
     .logo-container {
         margin-bottom: 10px;
     }
 
-    nav a {
-        font-size: 9px;
+    #logo {
+        width: 25px;
+    }
+
+    .logo-text {
+        font-size: 0.9rem;
+    }
+
+    .navbar ul {
+        flex-direction: row; /* Keep links in a row */
+        gap: 10px; /* Space between links */
+        align-items: center; /* Align items vertically */
+    }
+
+    .navbar a {
+        font-size: 10px;
         padding: 4px 8px;
     }
-
-    h1 {
-        font-size: 20px;
-    }
-    h2 {
-        margin-top: 50px;
-        font-size: 24px; 
-    }
-
-
-    .button.login {
-        font-size: 10px;
-        padding: 4px 15px;
-    }
 }
-
-/* Responsive Styling for Buttons */
-@media only screen and (max-width: 1024px) {
-    .banner .button {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .banner .button {
-        font-size: 12px;
-        padding: 8px 18px;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .banner .button {
-        font-size: 10px;
-        padding: 6px 15px;
-    }
-}
-
 
 /* Center Footer Content on Smaller Screens */
 @media only screen and (max-width: 768px) {
