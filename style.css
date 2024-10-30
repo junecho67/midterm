@@ -884,53 +884,53 @@ footer {
 /* Responsive Adjustments */
 @media only screen and (max-width: 1024px) {
     .navbar {
-        padding: 15px; /* Reduce padding */
+        padding: 15px;
     }
 
     #logo {
-        width: 35px; /* Reduce logo size */
+        width: 35px;
     }
 
     .logo-text {
-        font-size: 1.1rem; /* Shrink logo text */
+        font-size: 1.1rem; 
     }
 
     .navbar ul {
-        gap: 30px; /* Decrease link spacing */
+        gap: 30px;
     }
 
     .navbar a {
         font-size: 14px;
-        padding: 8px 12px; /* Adjust padding for links */
+        padding: 8px 12px;
     }
 }
 
 @media only screen and (max-width: 768px) {
     .navbar {
-        padding: 10px; /* Further reduce padding */
+        padding: 10px;
     }
 
     #logo {
-        width: 30px; /* Further reduce logo size */
+        width: 30px;
     }
 
     .logo-text {
-        font-size: 1rem; /* Shrink logo text more */
+        font-size: 1rem;
     }
 
     .navbar ul {
-        gap: 20px; /* Further decrease link spacing */
+        gap: 20px; 
     }
 
     .navbar a {
         font-size: 12px;
-        padding: 6px 10px; /* Adjust padding for smaller screens */
+        padding: 6px 10px;
     }
 }
 
 @media only screen and (max-width: 480px) {
     .navbar {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column;
         align-items: flex-start;
         padding: 8px;
     }
@@ -940,21 +940,21 @@ footer {
     }
 
     #logo {
-        width: 25px; /* Smallest logo size */
+        width: 25px;
     }
 
     .logo-text {
-        font-size: 0.9rem; /* Smallest logo text */
+        font-size: 0.9rem;
     }
 
     .navbar ul {
-        flex-direction: column; /* Stack links vertically */
+        flex-direction: column;
         gap: 10px;
         align-items: flex-start;
     }
 
     .navbar a {
-        font-size: 10px; /* Smallest font size for links */
+        font-size: 10px;
         padding: 4px 8px;
     }
 }
@@ -971,7 +971,7 @@ footer {
     }
     
     h2 {
-        margin-top: 30px; /* Increased margin for readability on larger mobile screens */
+        margin-top: 30px;
     }
 
     .button.login {
@@ -993,7 +993,7 @@ footer {
     }
 
     h2 {
-        margin-top: 40px; /* Further increase margin-top for readability on smaller screens */
+        margin-top: 80px;
     }
 
     .button.login {
@@ -1008,18 +1008,21 @@ footer {
 }
 
 @media only screen and (max-width: 480px) {
-    /* Stack navbar items vertically only on very small screens */
-
     .logo-container {
         margin-bottom: 10px;
+    }
+
+    nav a {
+        font-size: 9px;
+        padding: 4px 8px;
     }
 
     h1 {
         font-size: 20px;
     }
     h2 {
-        margin-top: 50px; /* Max margin-top for smallest screens to create visual separation */
-        font-size: 24px; /* Adjust font size for readability */
+        margin-top: 50px;
+        font-size: 24px; 
     }
 
 
@@ -1055,14 +1058,14 @@ footer {
 /* Center Footer Content on Smaller Screens */
 @media only screen and (max-width: 768px) {
     .footer-content {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items horizontally */
-        text-align: center; /* Center-align text */
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
         padding: 15px;
     }
 
     .footer-section {
-        margin-bottom: 15px; /* Add spacing between sections */
+        margin-bottom: 15px;
     }
 }
 
@@ -1072,10 +1075,10 @@ footer {
     }
 
     .footer-section {
-        padding: 10px 0; /* Further reduce padding for tight spaces */
+        padding: 10px 0; 
     }
 
     .footer-bottom {
-        font-size: 0.9em; /* Reduce font size for small screens */
+        font-size: 0.9em;
     }
 }
