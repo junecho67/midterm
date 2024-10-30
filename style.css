@@ -881,6 +881,7 @@ footer {
 }
 
 /* General Styles for Navbar */
+/* General Styles for Navbar */
 .navbar {
     display: flex; /* Use flexbox for alignment */
     justify-content: space-between; /* Space between logo and links */
@@ -976,7 +977,8 @@ footer {
         align-items: center; /* Align items vertically */
         justify-content: center; /* Center the nav links */
         width: 100%; /* Full width to ensure fitting */
-        overflow-x: auto; /* Allow horizontal scrolling if needed */
+        padding: 0; /* Remove padding to fit links in one line */
+        margin: 0; /* Remove default margin */
     }
 
     .navbar a {
