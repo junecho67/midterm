@@ -25,109 +25,106 @@
         </nav>
     </header>
 
+    <form action="https://httpbin.org/get" method="get" id="survey">
 
-    <h2>Survey</h2>
-    <p>Please let us know you dietary preferences/restrictions</p>
+        <h3>Choose a Specific Diet You Want to Follow</h3>
+        <p id="diet-error" style="color: #FF0000;"></p>
+        <p>
+            <input type="radio" name="dietary restrictions" id="gluten-free" value="gluten-fre">
+            <label for="gluten-free">Gluten Free</label>
+        </p>
+        <p>
+            <input type="radio" name="dietary restrictions" id="vegetarian" value="vegetarian">
+            <label for="vegetarian">Vegetarian</label>
+        </p>
+        <p>
+            <input type="radio" name="dietary restrictions" id="vegan" value="vegan">
+            <label for="vegan">Vegan</label>
+        </p>
+        <p>
+            <input type="radio" name="dietary restrictions" id="keto" value="keto">
+            <label for="keto">Keto</label>
+        </p>
+        <p>
+            <input type="radio" name="dietary restrictions" id="halal" value="halal">
+            <label for="halal">Halal</label>
+        </p>
+        <p>
+            <input type="radio" name="dietary restrictions" id="kosher/kashrut" value="kosher/kashrut">
+            <label for="kosher/kashrut">Kosher/Kashrut</label>
+        </p>
+        <p>
+            <input type="radio" name="dietary restrictions" id="diabetes-diet" value="diabetes-diet">
+            <label for="diabetes-diet">Diabetes Diet</label>
+        </p>
+        <p>
+            <input type="radio" name="dietary restrictions" id="lactose-intolerant" value="lactose-intolerant">
+            <label for="lactose-intolerant">Lactose-Intolerant</label>
+        </p>
+        <p>
+            <input type="radio" name="dietary restrictions" id="other-diet" value="other-diet">
+            <label for="other-diet">Other:</label>
+            <input type="text" name="other-diet-text" id="other-diet-text" placeholder="Low sodium diet"
+                autocomplete="on" disabled>
+        </p>
+        <p>
+            <input type="radio" name="dietary restrictions" id="no-diet" value="no-diet">
+            <label for="no-diet">I do not want to follow a specific diet</label>
+        </p>
 
-    <form action="https://httpbin.org/get" method="get" id="survey" class="form-element">
-        <fieldset>
-            <legend>Do you want to follow a specific diet?</legend>
-            <p id="diet-error" style="color: #FF0000;"></p>
-            <p>
-                <input type="radio" name="dietary restrictions" id="gluten-free" value="gluten-fre">
-                <label for="gluten-free">Gluten Free</label>
-            </p>
-            <p>
-                <input type="radio" name="dietary restrictions" id="vegetarian" value="vegetarian">
-                <label for="vegetarian">Vegetarian</label>
-            </p>
-            <p>
-                <input type="radio" name="dietary restrictions" id="vegan" value="vegan">
-                <label for="vegan">Vegan</label>
-            </p>
-            <p>
-                <input type="radio" name="dietary restrictions" id="keto" value="keto">
-                <label for="keto">Keto</label>
-            </p>
-            <p>
-                <input type="radio" name="dietary restrictions" id="halal" value="halal">
-                <label for="halal">Halal</label>
-            </p>
-            <p>
-                <input type="radio" name="dietary restrictions" id="kosher/kashrut" value="kosher/kashrut">
-                <label for="kosher/kashrut">Kosher/Kashrut</label>
-            </p>
-            <p>
-                <input type="radio" name="dietary restrictions" id="diabetes-diet" value="diabetes-diet">
-                <label for="diabetes-diet">Diabetes Diet</label>
-            </p>
-            <p>
-                <input type="radio" name="dietary restrictions" id="lactose-intolerant" value="lactose-intolerant">
-                <label for="lactose-intolerant">Lactose-Intolerant</label>
-            </p>
-            <p>
-                <input type="radio" name="dietary restrictions" id="other-diet" value="other-diet">
-                <label for="other-diet">Other:</label>
-                <input type="text" name="other-diet-text" id="other-diet-text" placeholder="Low sodium diet"
-                    autocomplete="on" disabled>
-            </p>
-            <p>
-                <input type="radio" name="dietary restrictions" id="no-diet" value="no-diet">
-                <label for="no-diet">I do not want to follow a specific diet</label>
-            </p>
-        </fieldset>
         <br>
-        <fieldset>
-            <legend>Foods/Ingredients You Don't Want In Your Meals</legend>
-            <p id="unwanted-foods-error" style="color: #FF0000;"></p>
-            <p>
-                <input type="radio" name="allergies" id="yes-allergies" value="yes-allergies">
-                <label for="yes-allergies">Allergies:</label>
-                <input type="text" name="allergies" id="yes-allergies-text" placeholder="Peanut butter allergy"
-                    autocomplete="on" required disabled>
-            </p>
-            <p>
-                <input type="radio" name="allergies" id="no-allergies" value="no-allergies">
-                <label for="no-allergies">I do not have any allergies</label>
-            </p>
-            <p>
-                <label for="unwanted-foods">Foods You Don't Want To Eat:</label>
-                <input type="text" name="unwanted-foods" id="unwanted-foods" placeholder="Brussel Sprouts"
-                    autocomplete="on">
-            </p>
-        </fieldset>
+
+        <h3>Foods/Ingredients You Don't Want in Your Meals</h3>
+        <p id="unwanted-foods-error" style="color: #FF0000;"></p>
+        <p>
+            <input type="radio" name="allergies" id="yes-allergies" value="yes-allergies">
+            <label for="yes-allergies">Allergies:</label>
+            <input type="text" name="allergies" id="yes-allergies-text" placeholder="Peanut butter allergy"
+                autocomplete="on" required disabled>
+        </p>
+        <p>
+            <input type="radio" name="allergies" id="no-allergies" value="no-allergies">
+            <label for="no-allergies">I do not have any allergies</label>
+        </p>
+        <p>
+            <label for="unwanted-foods">Foods You Don't Want To Eat:</label>
+            <input type="text" name="unwanted-foods" id="unwanted-foods" placeholder="Brussel Sprouts"
+                autocomplete="on">
+        </p>
+
         <br>
-        <fieldset>
-            <legend>Are There Any Dietary Goals You Have?</legend>
-            <p>
-                <input type="checkbox" name="dietary-goals" id="more-vegetables" value="more-vegetables">
-                <label for="more-vegetables">Increase Vegetable Intake: I want to half of my plate to be filled with
-                    vegetables at every meal.</label>
-            </p>
-            <p>
-                <input type="checkbox" name="dietary-goals" id="more-protein" value="more-protein">
-                <label for="more-protein">Increase Protein Intake: I want a source of protein with every meal.</label>
-            </p>
-            <p>
-                <input type="checkbox" name="dietary-goals" id="whole-grains" value="whole-grains">
-                <label for="whole-grains">Choose Whole Grains: Switch to whole grain options for bread, pasta, and
-                    rice.</label>
-            </p>
-            <p>
-                <input type="checkbox" name="dietary-goals" id="other-dietary-goals" value="other-dietary-goals">
-                <label for="other-dietary-goals">Other:</label>
-                <input type="text" name="other-dietary-goals-text" id="other-dietary-goals-text" autocomplete="on"
-                    autofocus disabled>
-            </p>
-            <p id="dietary-goals-error" style="color: #FF0000;"></p>
-        </fieldset>
+
+        <h3>Let Us Know About Your Dietary Goals</h3>
         <br>
-        <fieldset>
-            <legend>Send Us Any Additional Info You'd Like Us To Know</legend>
-            <label for="message">Your Message:</label>
-            <br>
-            <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here"></textarea>
-        </fieldset>
+        <p>
+            <input type="checkbox" name="dietary-goals" id="more-vegetables" value="more-vegetables">
+            <label for="more-vegetables">I want to half of my plate to be filled with
+                vegetables at every meal.</label>
+        </p>
+        <p>
+            <input type="checkbox" name="dietary-goals" id="more-protein" value="more-protein">
+            <label for="more-protein">I want a source of protein with every meal.</label>
+        </p>
+        <p>
+            <input type="checkbox" name="dietary-goals" id="whole-grains" value="whole-grains">
+            <label for="whole-grains">Switch to whole grain options for bread, pasta, and
+                rice.</label>
+        </p>
+        <p>
+            <input type="checkbox" name="dietary-goals" id="other-dietary-goals" value="other-dietary-goals">
+            <label for="other-dietary-goals">Other:</label>
+            <input type="text" name="other-dietary-goals-text" id="other-dietary-goals-text" autocomplete="on" autofocus
+                disabled>
+        </p>
+        <p id="dietary-goals-error" style="color: #FF0000;"></p>
+
+
+        <br>
+
+        <h3>Let Us Know About Any Other Information</h3>
+        <br>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here"></textarea>
+
         <br>
         <button type="submit" id="submit-btn">Submit</button>
     </form>
