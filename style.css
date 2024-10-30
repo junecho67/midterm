@@ -881,6 +881,83 @@ footer {
 }
 
 
+/* Responsive Adjustments */
+@media only screen and (max-width: 1024px) {
+    .navbar {
+        padding: 15px; /* Reduce padding */
+    }
+
+    #logo {
+        width: 35px; /* Reduce logo size */
+    }
+
+    .logo-text {
+        font-size: 1.1rem; /* Shrink logo text */
+    }
+
+    .navbar ul {
+        gap: 30px; /* Decrease link spacing */
+    }
+
+    .navbar a {
+        font-size: 14px;
+        padding: 8px 12px; /* Adjust padding for links */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    #logo {
+        width: 30px; /* Further reduce logo size */
+    }
+
+    .logo-text {
+        font-size: 1rem; /* Shrink logo text more */
+    }
+
+    .navbar ul {
+        gap: 20px; /* Further decrease link spacing */
+    }
+
+    .navbar a {
+        font-size: 12px;
+        padding: 6px 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+        padding: 8px;
+    }
+
+    .logo-container {
+        margin-bottom: 10px;
+    }
+
+    #logo {
+        width: 25px; /* Smallest logo size */
+    }
+
+    .logo-text {
+        font-size: 0.9rem; /* Smallest logo text */
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        font-size: 10px; /* Smallest font size for links */
+        padding: 4px 8px;
+    }
+}
 
 /* Responsive Screens */
 @media only screen and (max-width: 1024px) {
@@ -910,10 +987,6 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-    nav a {
-        font-size: 9px;
-        padding: 6px 10px;
-    }
 
     h1 {
         font-size: 24px;
@@ -928,38 +1001,17 @@ footer {
         padding: 6px 20px;
     }
 
-    /* Reduce spacing in navbar but keep items aligned */
-    .navbar {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 10px 15px;
-    }
-
     .logo-container {
         margin-right: auto;
     }
 
-    .nav-links {
-        display: flex;
-        gap: 10px;
-    }
 }
 
 @media only screen and (max-width: 480px) {
     /* Stack navbar items vertically only on very small screens */
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 8px;
-    }
 
     .logo-container {
         margin-bottom: 10px;
-    }
-
-    nav a {
-        font-size: 9px;
-        padding: 4px 8px;
     }
 
     h1 {
