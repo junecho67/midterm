@@ -6,77 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Results</title>
+
+    
 </head>
 
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo-container">
-                <a href="home.html">
-                    <img src="logo.png" alt="Balanced Bites" id="logo">
-                </a>
+            <a href="home.html" class="logo-container">
+                <img src="logo.png" alt="Balanced Bites" id="logo">
                 <span class="logo-text">Balanced Bites</span>
-            </div>
+            </a>
             <ul class="nav-links">
+                <li><a href="survey.html">Take Survey</a></li>
                 <li><a href="results.html">View Your Meal</a></li>
                 <li><a href="subscription.html">Subscriptions</a></li>
                 <li><a href="login.html">Sign In</a></li>
             </ul>
         </nav>
     </header>
-    <section id="meals">
-        <h3>Breakfast</h3>
-        <ol>
-            <li>
-                <strong>Smoothie Bowl</strong>: Blend <strong>fruits</strong> with <strong>almond milk</strong>, then
-                top with a mix
-                of <strong>nuts, seeds, and
-                    granola</strong>.
-            </li>
-            <li><strong>Chia Seed Pudding</strong>: Combine <strong>chia seeds</strong> with <strong>almond
-                    milk</strong> and let them soak overnight; then, add <strong>honey and fresh fruits</strong>.</li>
-            <li><strong>Omelet</strong>: Whisk <strong>eggs</strong> and fill it with a <strong>veggies</strong> like
-                spinach and tomatoes, then top it with a sprinkle of
-                <strong>cheese</strong>.
-            </li>
-        </ol>
 
-        <h3>Lunch</h3>
-        <ol>
-            <li><strong>Quinoa Salad</strong>: Prepare cooked <strong>quinoa</strong> with <strong>tomatoes, cucumbers,
-                    feta cheese, and oil dressing</strong>.</li>
-            <li><strong>Lettuce Wraps</strong>: Take large <strong>lettuce leaves</strong> and fill them with
-                <strong>grilled chicken, avocado,
-                    and fresh salsa</strong>.
-            </li>
-            <li><strong>Zucchini Noodles</strong>: Spiralize <strong>zucchini</strong>, sauté in olive oil with garlic,
-                and add
-                <strong>marinara sauce</strong>.
-            </li>
-        </ol>
+    <section class="results-section">
+        <h2>View Your Meals</h2>
+        <p class="description-text">
+            <i>Here are your personalized meal recommendations based on your survey results. <br>
+                If you're not satisfied, feel free to retake the survey by scrolling down 
+                and clicking the button below.</i>
+        </p>
 
-        <h3>Dinner</h3>
-        <ol>
-            <li><strong>Grilled Salmon</strong>: Cooked salmon fillets and served with roasted sweet potatoes and
-                steamed
-                broccoli.</li>
-            <li><strong>Zucchini Noodles</strong>: Sauté spiralized <strong>zucchini</strong> with <strong>marinara
-                    sauce</strong> and
-                add <strong>meatballs</strong>.
-            </li>
-            <li><strong>Curry</strong>: Create a <strong>chickpea or vegetable curry</strong> using <strong>coconut
-                    milk</strong>, and
-                serve it over <strong>rice</strong>.
-            </li>
-        </ol>
+        <section id="meals">
+            <div class="meal-column">
+                <h3>Breakfast</h3>
+                <ol>
+                    <li><strong>Smoothie Bowl</strong>: Blend <strong>fruits</strong> 
+                        with <strong>almond milk</strong>, then top with <strong>nuts, 
+                        seeds, and granola</strong>.</li>
+                    <li><strong>Chia Seed Pudding</strong>: Combine <strong>chia seeds</strong> 
+                        with <strong>almond milk</strong> and let them soak overnight; 
+                        then add <strong>honey and fresh fruits</strong>.</li>
+                    <li><strong>Omelet</strong>: Whisk <strong>eggs</strong> and fill 
+                        with <strong>veggies</strong> like spinach and tomatoes, then 
+                        top with <strong>cheese</strong>.</li>
+                </ol>
+            </div>
+
+            <div class="meal-column">
+                <h3>Lunch</h3>
+                <ol>
+                    <li><strong>Quinoa Salad</strong>: Cook <strong>quinoa</strong> with <strong>tomatoes, cucumbers, feta cheese, and oil dressing</strong>.</li>
+                    <li><strong>Lettuce Wraps</strong>: Fill large <strong>lettuce leaves</strong> with <strong>grilled chicken, avocado, and fresh salsa</strong>.</li>
+                    <li><strong>Zucchini Noodles</strong>: Spiralize <strong>zucchini</strong>, sauté in olive oil with garlic, and add <strong>marinara sauce</strong>.</li>
+                </ol>
+            </div>
+
+            <div class="meal-column">
+                <h3>Dinner</h3>
+                <ol>
+                    <li><strong>Grilled Salmon</strong>: Serve salmon fillets with roasted sweet potatoes and steamed broccoli.</li>
+                    <li><strong>Zucchini Noodles</strong>: Sauté spiralized <strong>zucchini</strong> with <strong>marinara sauce</strong> and add <strong>meatballs</strong>.</li>
+                    <li><strong>Curry</strong>: Create a <strong>chickpea or vegetable curry</strong> using <strong>coconut milk</strong>, served over <strong>rice</strong>.</li>
+                </ol>
+            </div>
+        </section>
+
+        <a href="survey.html" class="retake-survey-btn">Retake Survey</a>
+
     </section>
 
-    <!-- Footer Section -->
     <footer>
         <div class="footer-content">
-            <!-- Socials -->
             <div class="footer-section logo-socials">
-
                 <div class="social-icons">
                     <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
                     <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
@@ -84,7 +83,6 @@
                 </div>
             </div>
 
-            <!-- Navigation -->
             <div class="footer-section links">
                 <div class="link-pair">
                     <a href="contact.html">Contact Us</a>
@@ -92,7 +90,6 @@
                 </div>
             </div>
 
-            <!-- Newsletter Signup -->
             <div class="footer-section newsletter">
                 <h3>Subscribe to Balanced Bites</h3>
                 <form action="#" method="post">
@@ -102,12 +99,10 @@
             </div>
         </div>
 
-
         <div class="footer-bottom">
             <p>&copy; 2024 Balanced Bites. All rights reserved.</p>
         </div>
     </footer>
 
 </body>
-
 </html>

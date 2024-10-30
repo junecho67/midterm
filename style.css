@@ -1,4 +1,3 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +16,6 @@ body {
     background-color: white;
     color: #2e7d32;
     padding: 20px;
-    /* Consistent padding for all pages */
     position: fixed;
     width: 100%;
     top: 0;
@@ -69,9 +67,9 @@ body {
 
 /* Hero Section */
 .hero {
-    background-image: url('background.jpg');
-    background-size: cover;
-    background-position: center;
+    background-image: url('background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
     background-repeat: no-repeat;
     position: relative;
     padding: 120px 20px;
@@ -80,7 +78,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #ffffff;
+    color: #ffffff; 
 }
 
 .hero::before {
@@ -90,13 +88,13 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); 
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 2; 
     text-align: center;
     max-width: 800px;
     padding: 20px;
@@ -192,27 +190,22 @@ body {
 /* How It Works Section */
 .how-it-works {
     background-color: #f6f6f6;
-    padding: 10px 20px 60px;
-    /* Reduced padding-top */
+    padding: 10px 20px 60px; /* Reduced padding-top */
     text-align: center;
 }
 
 .how-it-works h2 {
     font-size: 36px;
     color: #2e7d32;
-    margin-bottom: 70px;
-    /* Optional: slightly reduce for more compact look */
+    margin-bottom: 70px; /* Optional: slightly reduce for more compact look */
 }
 
 .steps {
     display: flex;
-    flex-direction: column;
-    /* Stack items vertically */
-    align-items: center;
-    /* Center-align items */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items */
     gap: 20px;
-    max-width: 1200px;
-    /* Increased max width of the container */
+    max-width: 1200px; /* Increased max width of the container */
     margin: 0 auto;
 }
 
@@ -221,10 +214,8 @@ body {
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    /* Full width of the container */
-    max-width: 100%;
-    /* Set to 100% to let it expand within .steps */
+    width: 100%; /* Full width of the container */
+    max-width: 100%; /* Set to 100% to let it expand within .steps */
     text-align: left;
     margin-bottom: 20px
 }
@@ -241,7 +232,7 @@ body {
 }
 
 
-/* Footer */
+/* Footer Section */
 footer {
     background-color: #2e7d32;
     color: #ffffff;
@@ -622,20 +613,18 @@ footer {
 }
 
 /* Subscription Plans Section */
+
 .plan {
     background-color: #ffffff;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0px 4px 8px #2e372f85;
-    margin-bottom: 20px;
-    /* Added margin for spacing */
+    margin-bottom: 20px; /* Added margin for spacing */
 }
 
 .plan:hover {
-    transform: scale(1.05);
-    /* Scale effect on hover */
-    box-shadow: 0px 8px 16px #2e372f85;
-    /* Enhanced shadow on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0px 8px 16px #2e372f85; /* Enhanced shadow on hover */
 }
 
 .subscription-section {
@@ -704,55 +693,389 @@ footer {
     margin-bottom: 10px;
 }
 
+/* Survey Section */
+.survey-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #f6f6f6;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Survey Heading */
+.survey-section h2 {
+    font-size: 36px;
+    color: #2e7d32;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Survey Form Container */
 #survey {
-    margin-top: 110px;
-    margin-left: 50px;
-    margin-right: 50px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+    text-align: left;
+    margin: 0 auto; 
 }
 
-#survey p {
-    margin-bottom: 20px;
-    font-size: 16px;
-}
-
+/* Survey Form Headings */
 #survey h3 {
     color: #ff8f00;
     font-size: 24px;
-}
-
-#meals {
-    margin-top: 110px;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
-#meals ol {
+    font-weight: bold;
     margin-bottom: 20px;
+    margin-top: 5px;
 }
 
-#meals h3 {
-    margin-bottom: 10px;
-    color: #ff8f00;
-    font-size: 20px;
-}
-
-#meals ol li {
+/* Paragraphs Inside Survey Form */
+#survey p {
+    margin-bottom: 20px;
     font-size: 16px;
-    margin-bottom: 30px;
+    color: #555555;
 }
 
+/* Form Elements */
+#survey label {
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 8px;
+}
+
+#survey input[type="radio"],
+#survey input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#survey input[type="text"],
+#survey textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #dddddd;
+    font-size: 16px;
+    color: #333333;
+    margin-top: 5px;
+}
+
+#survey input[type="text"]:focus,
+#survey textarea:focus {
+    border-color: #ff8f00;
+    outline: none;
+}
+
+#survey textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Survey submit button */
 #submit-btn {
     background-color: #ff8f00;
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 12px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 18px;
-    height: 37.5px;
-    width: 81.4922px;
-    font-size: 14px;
-    margin-top: 10px;
+    width: 100%;
+    margin: 20px auto 0; 
+    display: block;
+    text-align: center;
+}
+
+#submit-btn:hover {
+    background-color: #ff6f00;
+}
+
+/* View Your Meal Section */
+.results-section {
+    padding: 60px 20px;
+    background-color: #f6f6f6;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.results-section h2 {
+    font-size: 36px;
+    color: #2e7d32;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Meal Columns */
+#meals {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.meal-column {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px #555555;
+    flex: 1;
+    min-width: 250px;
+}
+
+.meal-column h3 {
+    font-size: 24px;
+    color: #ff8f00;
     margin-bottom: 10px;
     text-align: center;
+}
+
+.meal-column ol {
+    padding-left: 20px;
+}
+
+.meal-column li {
+    margin-bottom: 10px;
+    color: #555555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.description-text {
+    text-align: center;
+    font-size: 16px;
+    color: #555555;
+    margin: 10px 50px;
+}
+
+.retake-survey-btn {
+    display: block;
+    width: 160px;
+    margin: 0 auto 40px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #2e7d32; 
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+.retake-survey-btn:hover {
+    background-color: #256728;
+}
+
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 1024px) {
+    .navbar {
+        padding: 15px; /* Reduce padding */
+    }
+
+    #logo {
+        width: 35px; /* Reduce logo size */
+    }
+
+    .logo-text {
+        font-size: 1.1rem; /* Shrink logo text */
+    }
+
+    .navbar ul {
+        gap: 30px; /* Decrease link spacing */
+    }
+
+    .navbar a {
+        font-size: 14px;
+        padding: 8px 12px; /* Adjust padding for links */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    #logo {
+        width: 30px; /* Further reduce logo size */
+    }
+
+    .logo-text {
+        font-size: 1rem; /* Shrink logo text more */
+    }
+
+    .navbar ul {
+        gap: 20px; /* Further decrease link spacing */
+    }
+
+    .navbar a {
+        font-size: 12px;
+        padding: 6px 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+        padding: 8px;
+    }
+
+    .logo-container {
+        margin-bottom: 10px;
+    }
+
+    #logo {
+        width: 25px; /* Smallest logo size */
+    }
+
+    .logo-text {
+        font-size: 0.9rem; /* Smallest logo text */
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        font-size: 10px; /* Smallest font size for links */
+        padding: 4px 8px;
+    }
+}
+
+/* Responsive Screens */
+@media only screen and (max-width: 1024px) {
+    nav a {
+        font-size: 9px;
+        padding: 8px 12px;
+    }
+    
+    h1 {
+        font-size: 30px;
+    }
+    
+    h2 {
+        margin-top: 30px; /* Increased margin for readability on larger mobile screens */
+    }
+
+    .button.login {
+        font-size: 14px;
+        padding: 8px 25px;
+    }
+
+    /* Maintain horizontal alignment for navbar */
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        margin-top: 40px; /* Further increase margin-top for readability on smaller screens */
+    }
+
+    .button.login {
+        font-size: 12px;
+        padding: 6px 20px;
+    }
+
+    .logo-container {
+        margin-right: auto;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    /* Stack navbar items vertically only on very small screens */
+
+    .logo-container {
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+    h2 {
+        margin-top: 50px; /* Max margin-top for smallest screens to create visual separation */
+        font-size: 24px; /* Adjust font size for readability */
+    }
+
+
+    .button.login {
+        font-size: 10px;
+        padding: 4px 15px;
+    }
+}
+
+/* Responsive Styling for Buttons */
+@media only screen and (max-width: 1024px) {
+    .banner .button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .banner .button {
+        font-size: 12px;
+        padding: 8px 18px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .banner .button {
+        font-size: 10px;
+        padding: 6px 15px;
+    }
+}
+
+
+/* Center Footer Content on Smaller Screens */
+@media only screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center-align text */
+        padding: 15px;
+    }
+
+    .footer-section {
+        margin-bottom: 15px; /* Add spacing between sections */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .footer-content {
+        padding: 10px;
+    }
+
+    .footer-section {
+        padding: 10px 0; /* Further reduce padding for tight spaces */
+    }
+
+    .footer-bottom {
+        font-size: 0.9em; /* Reduce font size for small screens */
+    }
 }
