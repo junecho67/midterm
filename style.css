@@ -966,17 +966,21 @@ footer {
     align-items: center; /* Align items vertically */
     background-color: #f8f8f8; /* Background color for the navbar */
     padding: 10px 20px; /* Padding for the navbar */
+    flex-wrap: nowrap; /* Prevent wrapping of navbar */
 }
 
 .navbar ul {
     list-style: none; /* Remove bullets from list */
     display: flex; /* Flexbox for horizontal layout */
     gap: 15px; /* Space between links */
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 .navbar a {
     text-decoration: none; /* Remove underline from links */
     color: #2e7d32; /* Link color */
+    padding: 8px; /* Padding for links */
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 /* Responsive Adjustments */
