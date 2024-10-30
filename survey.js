@@ -38,7 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Submit button click
     const submit_btn = document.querySelector("#submit-btn");
-    submit_btn.addEventListener("click", () => {
+    submit_btn.addEventListener("click", (evt) => {
+        evt.preventDefault();
         const diet_error = survey.querySelector("#diet-error");
         const unwanted_foods_error = survey.querySelector("#unwanted-foods-error");
         const dietary_goals_error = survey.querySelector("#dietary-goals-error");
