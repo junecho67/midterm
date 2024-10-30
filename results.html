@@ -7,142 +7,147 @@
     <link rel="stylesheet" href="style.css">
     <title>Results</title>
     <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
+    /* General Styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
 
-        /* Header Navigation */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #f8f8f8;
-            padding: 10px 20px;
-        }
+    /* Header Navigation */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f8f8f8;
+        padding: 10px 20px;
+    }
 
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #2e7d32;
+    }
+
+    /* View Your Meal Section */
+    .section-header {
+        font-size: 36px; 
+        color: #2e7d32; 
+        margin-top: 50px; 
+        margin-bottom: 20px; 
+        text-align: center; 
+        font-weight: bold; 
+    }
+
+    #meals {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 20px; 
+        padding: 20px;
+    }
+
+    .meal-column {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px #555555;
+        flex: 1 1 300px; 
+        min-width: 250px; 
+    }
+
+    .meal-column h3 {
+        font-size: 24px;
+        color: #ff8f00;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .description-text {
+        text-align: center;
+        font-size: 16px;
+        color: #555555;
+        margin: 10px 20px; 
+    }
+
+    .retake-survey-btn {
+        display: block;
+        width: 160px;
+        margin: 20px auto; 
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #ffffff;
+        background-color: #2e7d32; 
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s;
+    }
+
+    .retake-survey-btn:hover {
+        background-color: #256728;
+    }
+
+    /* Footer Styles */
+    footer {
+        padding: 20px;
+        background-color: #f8f8f8;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-between;
+        align-items: flex-start; 
+    }
+
+    .footer-section {
+        flex: 1 1 200px;
+        margin: 10px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* mobile responsiveness */
+    @media (max-width: 600px) {
         .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 15px;
+            flex-direction: column; /* Stack nav links vertically */
+            align-items: center; /* Center nav links */
         }
 
-        .nav-links a {
-            text-decoration: none;
-            color: #2e7d32;
-        }
-
-        /* View Your Meal Section */
         .section-header {
-            font-size: 36px; 
-            color: #2e7d32; 
-            margin-top: 50px; 
-            margin-bottom: 20px; 
-            text-align: center; 
-            font-weight: bold; 
-        }
-
-        #meals {
-            display: flex;
-            flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
-            justify-content: center;
-            gap: 20px; /* Reduced gap for smaller screens */
-            padding: 20px;
-        }
-
-        .meal-column {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px #555555;
-            flex: 1 1 300px; /* Allow columns to grow and shrink */
-            min-width: 250px; /* Minimum width for each column */
-        }
-
-        .meal-column h3 {
-            font-size: 24px;
-            color: #ff8f00;
-            margin-bottom: 10px;
-            text-align: center;
+            font-size: 28px; 
         }
 
         .description-text {
-            text-align: center;
-            font-size: 16px;
-            color: #555555;
-            margin: 10px 20px; /* Adjusted margin for better spacing */
+            font-size: 14px; 
+        }
+
+        .meal-column {
+            flex: 1 1 100%; 
         }
 
         .retake-survey-btn {
-            display: block;
-            width: 160px;
-            margin: 20px auto; /* Center button with margin */
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #ffffff;
-            background-color: #2e7d32; 
-            border: none;
-            border-radius: 5px;
-            text-align: center;
-            text-decoration: none;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.3s;
+            width: 100%; 
         }
 
-        .retake-survey-btn:hover {
-            background-color: #256728;
-        }
-
-        /* Footer Styles */
         footer {
-            padding: 20px;
-            background-color: #f8f8f8;
+            background-color: #2e7d32; 
         }
+    }
+</style>
 
-        .footer-content {
-            display: flex;
-            flex-wrap: wrap; /* Allow footer sections to wrap on smaller screens */
-            justify-content: space-between;
-            align-items: flex-start; /* Align items to the top */
-        }
-
-        .footer-section {
-            flex: 1 1 200px; /* Allow sections to grow and shrink */
-            margin: 10px;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        /* Media Queries for Responsiveness */
-        @media (max-width: 600px) {
-            .nav-links {
-                flex-direction: column; /* Stack nav links vertically */
-                align-items: center; /* Center nav links */
-            }
-
-            .section-header {
-                font-size: 28px; /* Adjust header size on small screens */
-            }
-
-            .description-text {
-                font-size: 14px; /* Adjust text size on small screens */
-            }
-
-            .meal-column {
-                flex: 1 1 100%; /* Stack meal columns on small screens */
-            }
-
-            .retake-survey-btn {
-                width: 100%; /* Make button full-width on small screens */
-            }
-        }
-    </style>
 </head>
 
 <body>
