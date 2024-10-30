@@ -880,85 +880,6 @@ footer {
     background-color: #256728;
 }
 
-
-/* Responsive Adjustments */
-@media only screen and (max-width: 1024px) {
-    .navbar {
-        padding: 15px;
-    }
-
-    #logo {
-        width: 35px;
-    }
-
-    .logo-text {
-        font-size: 1.1rem; 
-    }
-
-    .navbar ul {
-        gap: 30px;
-    }
-
-    .navbar a {
-        font-size: 14px;
-        padding: 8px 12px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .navbar {
-        padding: 10px;
-    }
-
-    #logo {
-        width: 30px;
-    }
-
-    .logo-text {
-        font-size: 1rem;
-    }
-
-    .navbar ul {
-        gap: 20px; 
-    }
-
-    .navbar a {
-        font-size: 12px;
-        padding: 6px 10px;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .navbar {
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 8px;
-    }
-
-    .logo-container {
-        margin-bottom: 10px;
-    }
-
-    #logo {
-        width: 25px;
-    }
-
-    .logo-text {
-        font-size: 0.9rem;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        gap: 10px;
-        align-items: flex-start;
-    }
-
-    .navbar a {
-        font-size: 10px;
-        padding: 4px 8px;
-    }
-}
-
 /* General Styles for Navbar */
 .navbar {
     display: flex; /* Use flexbox for alignment */
@@ -1032,31 +953,35 @@ footer {
 
 @media only screen and (max-width: 480px) {
     .navbar {
-        flex-direction: row; /* Ensure horizontal layout */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
         padding: 8px;
     }
 
     .logo-container {
-        margin-bottom: 10px;
+        margin-bottom: 10px; /* Space below the logo */
     }
 
     #logo {
-        width: 25px;
+        width: 25px; /* Adjust logo size */
     }
 
     .logo-text {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* Adjust logo text size */
     }
 
     .navbar ul {
         flex-direction: row; /* Keep links in a row */
         gap: 10px; /* Space between links */
         align-items: center; /* Align items vertically */
+        justify-content: center; /* Center the nav links */
+        width: 100%; /* Full width to ensure fitting */
+        overflow-x: auto; /* Allow horizontal scrolling if needed */
     }
 
     .navbar a {
-        font-size: 10px;
-        padding: 4px 8px;
+        font-size: 10px; /* Font size for mobile */
+        padding: 4px 8px; /* Padding for links */
     }
 }
 
