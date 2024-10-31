@@ -545,7 +545,7 @@ footer {
     padding: 60px 20px;
 }
 
-.contact-section h2 {
+.contact-section h1 {
     font-size: 36px;
     color: #2e7d32;
     margin-top: 50px;
@@ -634,7 +634,7 @@ footer {
     padding: 60px 20px;
 }
 
-.subscription-section h2 {
+.subscription-section h1 {
     font-size: 36px;
     color: #2e7d32;
     margin-top: 50px;
@@ -707,7 +707,7 @@ footer {
 }
 
 /* Survey Heading */
-.survey-section h2 {
+.survey-section h1 {
     font-size: 36px;
     color: #2e7d32;
     margin-top: 50px;
@@ -729,7 +729,7 @@ footer {
 }
 
 /* Survey Form Headings */
-#survey h3 {
+#survey h2 {
     color: #ff8f00;
     font-size: 24px;
     font-weight: bold;
