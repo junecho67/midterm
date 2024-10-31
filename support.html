@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Customer Support</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- jQuery Library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
+<!-- Header Section -->
 <header>
   <nav class="navbar">
     <div class="logo-container">
@@ -25,9 +28,11 @@
   </nav>
 </header>
 
+<!-- Support Section -->
 <section class="support-section">
   <h2>Customer Support</h2>
 
+  <!-- FAQ Section -->
   <div class="support-option">
     <h3>Frequently Asked Questions (FAQs)</h3>
     <p>Get answers to common questions:</p>
@@ -46,120 +51,82 @@
     <div class="faq-section">
       <button class="faq-toggle">How do I cancel my subscription?</button>
       <ul class="faq-list" style="display: none;">
-        <li>To cancel your subscription, log in to your account, go to the "Subscription Settings," and select "Cancel Subscription." If you need further assistance, please contact us, and we will be happy to help!</li>
+        <li>To cancel your subscription, log in to your account, go to "Subscription Settings," and select "Cancel Subscription." If you need further assistance, please contact us!</li>
       </ul>
     </div>
   </div>
-   
 
-    <div class="support-option">
-      <h3>Track Your Delivery</h3>
-      <p>Check the status of your meal delivery.</p>
-      <a href="#" class="button">Track My Meal ➔</a>
-    </div>
+  <!-- Delivery Tracking Option -->
+  <div class="support-option">
+    <h3>Track Your Delivery</h3>
+    <p>Check the status of your meal delivery.</p>
+    <a href="#" class="button">Track My Meal ➔</a>
+  </div>
 
-    <div class="support-option">
-      <h3>Guide to use Balance Bites!</h3>
-      <p>Discover step-by-step guides and tutorials to help you get the most out of Balanced Bites.</p>
-      <ul class="resources-list">
-      </ul>
-      <a href="#" class="button">Watch Tutorial ➔</a>
-    </div>
+  <!-- Guide Option -->
+  <div class="support-option">
+    <h3>Guide to Use Balance Bites!</h3>
+    <p>Discover step-by-step guides and tutorials to help you get the most out of Balanced Bites.</p>
+    <ul class="resources-list"></ul>
+    <a href="#" class="button">Watch Tutorial ➔</a>
+  </div>
 
-    <div class="support-option">
-      <h3>Feedback</h3>
-      <p>We value your input! Let us know about your experience or suggest new features.</p>
-      <a href="#" class="button">Submit Feedback ➔</a>
-    </div>
+  <!-- Feedback Option -->
+  <div class="support-option">
+    <h3>Feedback</h3>
+    <p>We value your input! Let us know about your experience or suggest new features.</p>
+    <a href="#" class="button">Submit Feedback ➔</a>
+  </div>
 
-    <p style="text-align: center; font-style: italic; margin-top: 40px;">Cannot find what you are looking for? Reach out, and will be happy to assist!</p>
+  <p style="text-align: center; font-style: italic; margin-top: 40px;">
+    Cannot find what you are looking for? Reach out, and we will be happy to assist!
+  </p>
 </section>
 
 <!-- Footer Section -->
 <footer>
-    <div class="footer-content">
-        <!-- Socials -->
-        <div class="footer-section logo-socials">
-
-            <div class="social-icons">
-                <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
-                <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
-                <a href="https://www.twitter.com/" target="_blank">Twitter</a>
-            </div>
-        </div>
-
-        <!-- Navigation -->
-        <div class="footer-section links">
-            <div class="link-pair">
-                <a href="contact.html">Contact Us</a>
-                <a href="support.html">Customer Support</a>
-            </div>
-        </div>
-
-        <!-- Newsletter Signup -->
-        <div class="footer-section newsletter">
-            <h3>Subscribe to Balanced Bites</h3>
-            <form action="#" method="post">
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+  <div class="footer-content">
+    <!-- Social Media Links -->
+    <div class="footer-section logo-socials">
+      <div class="social-icons">
+        <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
+        <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
+        <a href="https://www.twitter.com/" target="_blank">Twitter</a>
+      </div>
     </div>
 
+    <!-- Quick Links -->
+    <div class="footer-section links">
+      <div class="link-pair">
+        <a href="contact.html">Contact Us</a>
+        <a href="support.html">Customer Support</a>
+      </div>
+    </div>
 
-<div class="footer-bottom">
+    <!-- Newsletter Signup -->
+    <div class="footer-section newsletter">
+      <h3>Subscribe to Balanced Bites</h3>
+      <form action="#" method="post">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
     <p>&copy; 2024 Balanced Bites. All rights reserved.</p>
-</div>
+  </div>
 </footer>
 
+<!-- jQuery Script -->
 <script>
-    // Custom fadeToggle function using vanilla JavaScript
-    function fadeToggle(element) {
-      const displayStyle = window.getComputedStyle(element).display;
-      element.style.transition = "opacity 0.5s ease"; // Adjust duration as needed
-  
-      if (displayStyle === "none") {
-        element.style.display = "block";
-        element.style.opacity = "0";
-        setTimeout(() => {
-          element.style.opacity = "1";
-        }, 10);
-      } else {
-        element.style.opacity = "0";
-        setTimeout(() => {
-          element.style.display = "none";
-        }, 500); // Match the transition duration
-      }
-    }
-  
-    // Event listener for FAQ toggle buttons
-    document.querySelectorAll('.faq-toggle').forEach(button => {
-      button.addEventListener('click', function () {
-        const faqList = this.nextElementSibling;
-        fadeToggle(faqList);
-      });
+  $(document).ready(function() {
+    // FAQ toggle with fade effect
+    $('.faq-toggle').click(function() {
+      $(this).next('.faq-list').fadeToggle(500); // 500ms duration for fade effect
     });
-  
-    // Feedback form validation
-    document.getElementById("feedback-form")?.addEventListener("submit", function(event) {
-      const name = document.getElementById("name")?.value;
-      const email = document.getElementById("email")?.value;
-      const message = document.getElementById("message")?.value;
-  
-      if (!name || !email || !message) {
-        alert("Please fill out all fields.");
-        event.preventDefault();
-      } else if (!/\S+@\S+\.\S+/.test(email)) {
-        alert("Please enter a valid email.");
-        event.preventDefault();
-      } else {
-        alert("Feedback submitted successfully!");
-      }
-    });
-  </script>
-  
-  </body>
-  </html>
+  });
+</script>
 
 </body>
 </html>
