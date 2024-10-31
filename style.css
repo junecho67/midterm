@@ -807,7 +807,7 @@ footer {
     margin: 0 auto;
 }
 
-.results-section h2 {
+.results-section h1 {
     font-size: 36px;
     color: #2e7d32;
     margin-top: 50px;
@@ -835,7 +835,7 @@ footer {
     min-width: 250px;
 }
 
-.meal-column h3 {
+.meal-column h2 {
     font-size: 24px;
     color: #ff8f00;
     margin-bottom: 10px;
